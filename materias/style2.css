@@ -68,12 +68,10 @@ section{
    .imagem{
     border-radius: 30px;
     background-color: #57575773;
-    filter: blur(10px);
     transform: translateY(0px);
     transition: transform .5s;
    }
    .imagem:hover{
-    filter: blur(0px);
     transition: box-shadow .15s,transform .5s, filter .5s;
     transform: translateY(-20px);
    }

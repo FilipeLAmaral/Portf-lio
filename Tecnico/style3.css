@@ -1,15 +1,15 @@
 body{
-    background-color: rgb(108, 197, 197);
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    text-align: center;
+    font-size: 200px;
 }
 section{
     place-items: center;
     align-items: center;
     display: grid;
     min-height: 100vh;
-}
-h1{
-    font-size: 200px;
-    text-align: center;
 }
 .button-name {
     align-items: center;
@@ -47,14 +47,54 @@ h1{
    }
    
    .button-name:hover {
-       transition: 0.5s;
-       background-color: white;
-       color: black;
-       box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-       transform: translateY(-2px);
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
    }
    
    .button-name:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
+   } 
+   .Figura{
+    display: flex;
+    gap: 20px;
    }
+   .descricao{
+    width: 250px;
+   }
+   .imagem{
+    border-radius: 30px;
+    background-color: #57575773;
+    transform: translateY(0px);
+    transition: transform .5s;
+   }
+   .imagem:hover{
+    transition: box-shadow .15s,transform .5s, filter .5s;
+    transform: translateY(-20px);
+   }
+   .tooltip .descricao {
+    visibility: hidden;
+    width: 200px;
+    background-color: #28282817;
+    color: #282828;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+
+  }
+  
+  .tooltip:hover .descricao {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip .descricao::after {
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: #28282817 transparent transparent transparent;
+    transform: translateX(-50%);
+  }
